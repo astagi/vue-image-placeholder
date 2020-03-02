@@ -1,8 +1,16 @@
 import Vue from 'vue'
-import App from './App.vue'
+import ImagePlaceholder from './ImagePlaceholder.vue'
 
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App),
+  render: h => h(
+    ImagePlaceholder,
+    {
+      props : {
+        width: 500,
+        height:200,
+        images: 'newyork'
+      }
+    }),
 }).$mount('#app')
