@@ -17,5 +17,13 @@ describe('ImagePlaceholder.vue', () => {
     expect(
       wrapper.findAll('img').at(0).attributes().src
     ).toEqual('https://loremflickr.com/500/200/random')
+  }),
+  it('renders a square image if height is not specified', () => {
+    const wrapper = shallowMount(ImagePlaceholder, {
+      propsData: { width: 500 }
+    })
+    expect(
+      wrapper.findAll('img').at(0).attributes().src
+    ).toEqual('https://loremflickr.com/500/500/random')
   })
 })

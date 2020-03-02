@@ -9,7 +9,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class ImagePlaceholder extends Vue {
 
   @Prop({required: true}) readonly width!: number
-  @Prop({required: true}) readonly height!: number
+  @Prop({required: false, default: 0}) readonly height!: number
   @Prop({required: false, default: 'random'}) readonly images!: string
 
   get url(): string {
@@ -17,7 +17,11 @@ export default class ImagePlaceholder extends Vue {
   }
 
   private getPlaceholderUrl(): string {
-    return `https://loremflickr.com/${this.width}/${this.height}/${this.images}`
+    let height = this.height;
+    if (this.height == 0) {
+      height = this.width;
+    }
+    return `https://loremflickr.com/${this.width}/${height}/${this.images}`
   }
 
 }
