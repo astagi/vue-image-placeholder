@@ -13,10 +13,6 @@ export default class ImagePlaceholder extends Vue {
   @Prop({required: false, default: 'random'}) readonly images!: string
 
   get url(): string {
-    return this.getPlaceholderUrl();
-  }
-
-  private getPlaceholderUrl(): string {
     let height = this.height;
     if (this.height == 0) {
       height = this.width;
