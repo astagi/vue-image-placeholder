@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "vue-cli-service build --target lib --name vue-image-placeholder src/main.ts",
+    "build:wc": "vue-cli-service build --target wc --name vue-image-placeholder src/main.ts",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
