@@ -13,7 +13,15 @@ export default class ImagePlaceholder extends Vue {
   @Prop({required: false, default: 'random'}) readonly images!: string
 
   get url(): string {
-    return `https://loremflickr.com/${this.width}/${this.height || this.width}/${this.images}`
+    const finalUrl = new URL("https://loremflickr.com/");
+    finalUrl.pathname = `/${this.width}`;
+    finalUrl.pathname += `/${this.height || this.width}`;
+    if (this.images.includes(',')) {
+      finalUrl.pathname += `/${this.images}/all`;
+    } else {
+      finalUrl.pathname += `/${this.images.replace('|', ',')}`;
+    }
+    return finalUrl.href;
   }
 
 }

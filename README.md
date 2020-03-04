@@ -15,12 +15,12 @@ import ImagePlaceholder from 'vue-image-placeholder';
 ```
 
 ```html
-<ImagePlaceholder width=500 height=250 images="cat" />
+<ImagePlaceholder width=500 height=250 images="cats" />
 ```
 
 It renders
 
-<img src="https://loremflickr.com/500/250/cat"/>
+<img src="https://loremflickr.com/500/250/cats"/>
 
 Props `height` and `images` are optional.
 
