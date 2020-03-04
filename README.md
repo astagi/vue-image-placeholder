@@ -1,4 +1,4 @@
-# Vue Image Placeholder
+# Build Vue Image Placeholder using TDD
 
 [![Build Status](https://travis-ci.org/astagi/tdd-with-vue.svg?branch=master)](https://travis-ci.org/astagi/tdd-with-vue) [![codecov](https://codecov.io/gh/astagi/tdd-with-vue/branch/master/graph/badge.svg)](https://codecov.io/gh/astagi/tdd-with-vue)
 
