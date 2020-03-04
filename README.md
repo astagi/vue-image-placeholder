@@ -22,7 +22,18 @@ It renders
 
 <img src="https://loremflickr.com/500/250/cats"/>
 
-Props `height` and `images` are optional.
+`height` and `images` are optional.
+
+## Properties
+
+`width`: final image width (required)
+`height`: final image height (default is equal to width)
+`images` (default is `'random'`):
+  - `single value` returns an image of one category (e.g. 'cats').
+  - `comma separated value `returns an image with both categories (e.g. 'animals,cat').
+  - `pipe separated value` returns an image of one category (e.g. 'animal|cats').
+  - `'murray' `returns an image of Bill Murray.
+  - `'seagal'` return an image of Steve Seagal.
 
 ## Project setup for development
 

@@ -41,5 +41,37 @@ describe('ImagePlaceholder.vue', () => {
     expect(
       wrapper.findAll('img').at(0).attributes().src
     ).toEqual('https://loremflickr.com/500/200/cat,animals')
+  }),
+  it('renders the correct url for Bill Murray images', () => {
+    const wrapper = shallowMount(ImagePlaceholder, {
+      propsData: { width: 500, height:200, images: 'murray' }
+    })
+    expect(
+      wrapper.findAll('img').at(0).attributes().src
+    ).toEqual('https://www.fillmurray.com/500/200')
+  }),
+  it('renders a squared Bill Murray', () => {
+    const wrapper = shallowMount(ImagePlaceholder, {
+      propsData: { width: 500, images: 'murray' }
+    })
+    expect(
+      wrapper.findAll('img').at(0).attributes().src
+    ).toEqual('https://www.fillmurray.com/500/500')
+  }),
+  it('renders the correct url for Steven Seagal images', () => {
+    const wrapper = shallowMount(ImagePlaceholder, {
+      propsData: { width: 500, height:200, images: 'seagal' }
+    })
+    expect(
+      wrapper.findAll('img').at(0).attributes().src
+    ).toEqual('https://www.stevensegallery.com/500/200')
+  }),
+  it('renders a squared Steven Seagal', () => {
+    const wrapper = shallowMount(ImagePlaceholder, {
+      propsData: { width: 500, images: 'seagal' }
+    })
+    expect(
+      wrapper.findAll('img').at(0).attributes().src
+    ).toEqual('https://www.stevensegallery.com/500/500')
   })
 })
