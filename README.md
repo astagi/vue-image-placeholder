@@ -1,6 +1,8 @@
-# Build Vue Image Placeholder using TDD
+# Vue Image Placeholder
 
 [![Build Status](https://travis-ci.org/astagi/vue-image-placeholder.svg?branch=master)](https://travis-ci.org/astagi/vue-image-placeholder) [![codecov](https://codecov.io/gh/astagi/vue-image-placeholder/branch/master/graph/badge.svg)](https://codecov.io/gh/astagi/vue-image-placeholder)
+
+🌉 Multiservice Image Placeholder Vue component
 
 ## Installation
 
