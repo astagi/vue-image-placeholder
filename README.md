@@ -29,7 +29,7 @@ It renders
 Image Placeholder component supports also [Placeholder.com](https://placeholder.com/) service, use `text` to show a label in the placeholder
 
 ```html
-<ImagePlaceholder width=250 text="✌🏻 Vue!" foreground="#34495e" background="#41B883"/>
+<ImagePlaceholder width=250 text="Hello Vue!" foreground="#34495e" background="#41B883"/>
 ```
 
 <img src="https://via.placeholder.com/250x250/41B883/34495e?text=Hello+Vue%21"/>
