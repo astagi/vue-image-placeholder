@@ -29,10 +29,10 @@ It renders
 Image Placeholder component supports also [Placeholder.com](https://placeholder.com/) service, use `text` to show a label in the placeholder
 
 ```html
-<ImagePlaceholder width=500 text="Hello Vue!" />
+<ImagePlaceholder width=250 text="✌🏻 Vue!" foreground="#34495e" background="#41B883"/>
 ```
 
-<img src="https://via.placeholder.com/500x500?text=Hello+Vue%21"/>
+<img src="https://via.placeholder.com/250x250/41B883/34495e?text=Hello+Vue%21"/>
 
 
 ## Properties
@@ -48,7 +48,13 @@ Image Placeholder component supports also [Placeholder.com](https://placeholder.
   - `'murray' `returns an image of Bill Murray.
   - `'seagal'` return an image of Steve Seagal.
 
-`text` (only for `Placeholder.com` service) text to show inside the image.
+The following properties are only for `Placeholder.com` service:
+
+`text` text to show inside the image.
+
+`background` background color for the placeholder (e.g. #000000).
+
+`foreground` foreground color for the placeholder (e.g. #FFFFFF).
 
 ## Project setup for development
 

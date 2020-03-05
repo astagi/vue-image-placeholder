@@ -12,6 +12,8 @@ export default class ImagePlaceholder extends Vue {
   @Prop({required: false}) readonly height!: number
   @Prop({required: false}) readonly images!: string
   @Prop({required: false}) readonly text!: string
+  @Prop({required: false}) readonly background!: string
+  @Prop({required: false}) readonly foreground!: string
 
   get url(): string {
     switch (this.images) {
@@ -36,6 +38,12 @@ export default class ImagePlaceholder extends Vue {
   private getViaPlaceholderUrl(): string {
     const finalUrl = new URL("https://via.placeholder.com/");
     finalUrl.pathname = `/${this.width}x${this.height || this.width}`;
+    if (this.background) {
+      finalUrl.pathname += `/${this.background.replace('#', '')}`;
+    }
+    if (this.foreground) {
+      finalUrl.pathname += `/${this.foreground.replace('#', '')}`;
+    }
     if (this.text) {
       finalUrl.searchParams.append("text", this.text);
     }

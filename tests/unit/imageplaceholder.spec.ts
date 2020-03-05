@@ -81,5 +81,13 @@ describe('ImagePlaceholder.vue', () => {
     expect(
       wrapper.findAll('img').at(0).attributes().src
     ).toEqual('https://via.placeholder.com/500x500?text=Hello+Vue%21')
+  }),
+  it('renders a standard placeholder with text, foreground and background colors', () => {
+    const wrapper = shallowMount(ImagePlaceholder, {
+      propsData: { width: 250, text: 'Hello Vue!', foreground: '#34495e', background: '#41B883' }
+    })
+    expect(
+      wrapper.findAll('img').at(0).attributes().src
+    ).toEqual('https://via.placeholder.com/250x250/41B883/34495e?text=Hello+Vue%21')
   })
 })
