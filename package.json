@@ -1,7 +1,6 @@
 {
   "name": "vue-image-placeholder",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "build": "vue-cli-service build --target lib --name vue-image-placeholder src/main.ts",
     "build:wc": "vue-cli-service build --target wc --name vue-image-placeholder src/main.ts --dest lib",
@@ -21,6 +20,16 @@
     "src",
     "types"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astagi/vue-image-placeholder.git"
+  },
+  "author": "astagi <stagi.andrea@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/astagi/vue-image-placeholder/issues"
+  },
+  "homepage": "https://github.com/astagi/vue-image-placeholder",
   "devDependencies": {
     "@types/jest": "^24.0.19",
     "@typescript-eslint/eslint-plugin": "^2.18.0",
