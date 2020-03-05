@@ -1,6 +1,6 @@
 # Vue Image Placeholder
 
-[![Build Status](https://travis-ci.org/astagi/vue-image-placeholder.svg?branch=master)](https://travis-ci.org/astagi/vue-image-placeholder) [![codecov](https://codecov.io/gh/astagi/vue-image-placeholder/branch/master/graph/badge.svg)](https://codecov.io/gh/astagi/vue-image-placeholder) [![downloads](https://img.shields.io/npm/dm/vue-image-placeholder.svg)](https://www.npmjs.com/package/vue-image-placeholder) [![npm-version](https://img.shields.io/npm/v/vue-image-placeholder.svg)](https://www.npmjs.com/package/vue-image-placeholder) [![license](https://img.shields.io/npm/l/express.svg)]()
+[![Build Status](https://travis-ci.org/astagi/vue-image-placeholder.svg?branch=master)](https://travis-ci.org/astagi/vue-image-placeholder) [![codecov](https://codecov.io/gh/astagi/vue-image-placeholder/branch/master/graph/badge.svg)](https://codecov.io/gh/astagi/vue-image-placeholder) [![npm-version](https://img.shields.io/npm/v/vue-image-placeholder.svg)](https://www.npmjs.com/package/vue-image-placeholder) [![license](https://img.shields.io/npm/l/express.svg)]()
 
 🌉 Multiservice Image Placeholder Vue component
 
