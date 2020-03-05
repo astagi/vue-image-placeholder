@@ -10,22 +10,6 @@ describe('ImagePlaceholder.vue', () => {
       wrapper.findAll('img').at(0).attributes().src
     ).toEqual('https://loremflickr.com/500/200/newyork')
   }),
-  it('renders the correct url for Random images if not specified', () => {
-    const wrapper = shallowMount(ImagePlaceholder, {
-      propsData: { width: 500, height:200 }
-    })
-    expect(
-      wrapper.findAll('img').at(0).attributes().src
-    ).toEqual('https://loremflickr.com/500/200/random')
-  }),
-  it('renders a square image if height is not specified', () => {
-    const wrapper = shallowMount(ImagePlaceholder, {
-      propsData: { width: 500 }
-    })
-    expect(
-      wrapper.findAll('img').at(0).attributes().src
-    ).toEqual('https://loremflickr.com/500/500/random')
-  }),
   it('renders AND images if images is a comma separated value', () => {
     const wrapper = shallowMount(ImagePlaceholder, {
       propsData: { width: 500, height:200, images: 'cat,animals'}
@@ -73,5 +57,29 @@ describe('ImagePlaceholder.vue', () => {
     expect(
       wrapper.findAll('img').at(0).attributes().src
     ).toEqual('https://www.stevensegallery.com/500/500')
+  }),
+  it('renders a standard placeholder if no image is defined', () => {
+    const wrapper = shallowMount(ImagePlaceholder, {
+      propsData: { width: 420, height:320}
+    })
+    expect(
+      wrapper.findAll('img').at(0).attributes().src
+    ).toEqual('https://via.placeholder.com/420x320')
+  }),
+  it('renders a squared standard placeholder if height is not specified', () => {
+    const wrapper = shallowMount(ImagePlaceholder, {
+      propsData: { width: 500 }
+    })
+    expect(
+      wrapper.findAll('img').at(0).attributes().src
+    ).toEqual('https://via.placeholder.com/500x500')
+  }),
+  it('renders a standard placeholder with text if specified', () => {
+    const wrapper = shallowMount(ImagePlaceholder, {
+      propsData: { width: 500, text: 'Hello Vue!' }
+    })
+    expect(
+      wrapper.findAll('img').at(0).attributes().src
+    ).toEqual('https://via.placeholder.com/500x500?text=Hello+Vue%21')
   })
 })
